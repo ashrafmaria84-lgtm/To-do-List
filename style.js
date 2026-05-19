@@ -1,6 +1,4 @@
-// =========================
-// ELEMENTS
-// =========================
+
 
 const loginTab =
 document.getElementById("loginTab");
@@ -80,9 +78,7 @@ document.getElementById("noteInput");
 const statsSection =
 document.getElementById("statsSection");
 
-// =========================
-// STORAGE
-// =========================
+
 
 let tasks =
 JSON.parse(localStorage.getItem("tasks")) || [];
@@ -98,9 +94,7 @@ localStorage.getItem("quickNote") || "";
 
 noteInput.value = savedNote;
 
-// =========================
-// LOGIN TABS
-// =========================
+
 
 loginTab.onclick = ()=>{
 
@@ -160,9 +154,7 @@ signupForm.addEventListener("submit",(e)=>{
 
 });
 
-// =========================
-// LOGIN
-// =========================
+
 
 loginForm.addEventListener("submit",(e)=>{
 
@@ -198,9 +190,7 @@ loginForm.addEventListener("submit",(e)=>{
 
 });
 
-// =========================
-// SHOW DASHBOARD
-// =========================
+
 
 function showDashboard(){
 
@@ -212,9 +202,7 @@ function showDashboard(){
 
 }
 
-// =========================
-// AUTO LOGIN
-// =========================
+
 
 if(currentUser){
 
@@ -222,9 +210,7 @@ if(currentUser){
 
 }
 
-// =========================
-// NOTIFICATION
-// =========================
+
 
 if(Notification.permission !== "granted"){
 
@@ -232,9 +218,7 @@ if(Notification.permission !== "granted"){
 
 }
 
-// =========================
-// ADD TASK
-// =========================
+
 
 addTaskBtn.addEventListener("click",()=>{
 
@@ -284,9 +268,7 @@ addTaskBtn.addEventListener("click",()=>{
 
 });
 
-// =========================
-// SAVE TASKS
-// =========================
+
 
 function saveTasks(){
 
@@ -299,9 +281,7 @@ function saveTasks(){
 
 }
 
-// =========================
-// RENDER TASKS
-// =========================
+
 
 function renderTasks(filteredTasks = tasks){
 
@@ -384,9 +364,7 @@ function renderTasks(filteredTasks = tasks){
 
 }
 
-// =========================
-// UPDATE STATS
-// =========================
+
 
 function updateStats(){
 
@@ -405,9 +383,7 @@ function updateStats(){
 
 }
 
-// =========================
-// COMPLETE TASK
-// =========================
+
 
 function toggleTask(id){
 
@@ -428,9 +404,7 @@ function toggleTask(id){
 
 }
 
-// =========================
-// DELETE TASK
-// =========================
+
 
 function deleteTask(id){
 
@@ -442,9 +416,7 @@ function deleteTask(id){
 
 }
 
-// =========================
-// EDIT TASK
-// =========================
+
 
 function editTask(id){
 
@@ -473,9 +445,7 @@ function editTask(id){
 
 }
 
-// =========================
-// SEARCH
-// =========================
+
 
 searchInput.addEventListener("input",()=>{
 
@@ -495,9 +465,7 @@ searchInput.addEventListener("input",()=>{
 
 });
 
-// =========================
-// FILTER
-// =========================
+
 
 const filterButtons =
 document.querySelectorAll(".filter-btn");
@@ -547,9 +515,7 @@ filterButtons.forEach(btn=>{
 
 });
 
-// =========================
-// DARK MODE
-// =========================
+
 
 const savedTheme =
 localStorage.getItem("theme");
@@ -588,9 +554,6 @@ themeToggle.addEventListener("click",()=>{
 
 });
 
-// =========================
-// NOTES
-// =========================
 
 saveNoteBtn.addEventListener("click",()=>{
 
@@ -603,9 +566,7 @@ saveNoteBtn.addEventListener("click",()=>{
 
 });
 
-// =========================
-// SIDEBAR
-// =========================
+
 
 dashboardBtn.onclick = ()=>{
 
@@ -651,9 +612,6 @@ notesBtn.onclick = ()=>{
 
 };
 
-// =========================
-// LOGOUT
-// =========================
 
 logoutBtn.addEventListener("click",()=>{
 
@@ -665,9 +623,6 @@ logoutBtn.addEventListener("click",()=>{
 
 });
 
-// =========================
-// NOTIFICATION FUNCTION
-// =========================
 
 function scheduleNotification(task){
 
@@ -703,9 +658,7 @@ function scheduleNotification(task){
 
 }
 
-// =========================
-// LIVE MOUSE BACKGROUND
-// =========================
+
 
 document.addEventListener("mousemove",(e)=>{
 
